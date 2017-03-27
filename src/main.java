@@ -12,19 +12,19 @@ public class main {
         return rand.nextInt(n) + 1;
     }
         public static void main(String[] args) {
-            int p,g;
+            int p,q;
             double Ta,Tb,Sa,Sb,KeyTa,KeyTb;
             Scanner scan = new Scanner(System.in);
             System.out.println("Please enter the value of p: ");
             p=scan.nextInt();
-            System.out.println("Please enter the value of g: ");
-            g=scan.nextInt();
-            Sa=random(20);
-            Sb=random(20);
+            System.out.println("Please enter the value of q: ");
+            q=scan.nextInt();
+            Sa=random(Math.min(p,q));
+            Sb=random(Math.min(p,q));
             System.out.println("Generate Random Secret Number Sa: " +Sa);
             System.out.println("Generate Random Secret Number Sb: " +Sb);
-            Ta=(int)(Math.pow(g,Sa)%p);
-            Tb=(int)(Math.pow(g,Sb)%p);
+            Ta=(int)(Math.pow(q,Sa)%p);
+            Tb=(int)(Math.pow(q,Sb)%p);
             System.out.println("Ta: " +Ta);
             System.out.println("Tb: " +Tb);
             System.out.println("Exchange Ta and Tb ");
